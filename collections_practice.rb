@@ -19,15 +19,9 @@ def reverse_array(array)
 end
 
 def kesha_maker(array)
-  (0..array.size).step(2) { |i| array[i] = array["$"] }
-  if block_given?
-    i = 0
-    while i < array.length
-    yield array[i]
-    i += 1
-    end
-    array
-    end
+  array.each do |i| 
+    i[2] = "$" 
+  end
 end
 
 def find_a(array)
@@ -39,5 +33,11 @@ def sum_array(array)
 end
 
 def add_s(array)
-  return array.each_with_index.collect { |i| i.length + "s" }
+  return array.each_with_index.collect do |i| 
+    if array[1] == i
+      i
+    else
+      i + "s"
+    end
+  end
 end
