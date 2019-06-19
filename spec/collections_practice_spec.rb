@@ -1,5 +1,5 @@
 require 'spec_helper'
-
+ 
 describe 'collections practice' do
 
   # Question 1
